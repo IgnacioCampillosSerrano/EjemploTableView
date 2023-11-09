@@ -80,6 +80,7 @@
                                         <connections>
                                             <outlet property="lbContenido" destination="cSa-cJ-rxw" id="Xun-1L-8iw"/>
                                             <outlet property="lbTitulo" destination="aEA-Xp-yXF" id="8bz-V0-2MM"/>
+                                            <segue destination="pfn-yr-ZYJ" kind="show" identifier="MODIFICAR" id="nZC-tY-xIS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86.956521739130437" y="101.78571428571428"/>
+            <point key="canvasLocation" x="-248" y="179"/>
         </scene>
         <!--Crear Tarea View Controller-->
         <scene sceneID="X9s-Ii-Fge">
@@ -181,7 +182,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbT-VX-fbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.85507246376812" y="101.78571428571428"/>
+            <point key="canvasLocation" x="754" y="539"/>
+        </scene>
+        <!--Modificar View Controller-->
+        <scene sceneID="SxJ-xz-dR4">
+            <objects>
+                <viewController id="pfn-yr-ZYJ" customClass="ModificarViewController" customModule="EjemploTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5V-HB-E8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KM-Wh-CmT">
+                                <rect key="frame" x="20" y="79" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9gw-0E-X4n"/>
+                                    <constraint firstAttribute="width" constant="374" id="ElP-QB-kD2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsU-VU-ac1">
+                                <rect key="frame" x="20" y="151" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="kwv-ZT-QAV"/>
+                                    <constraint firstAttribute="height" constant="34" id="vkb-qu-MYG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdb-4O-OaA">
+                                <rect key="frame" x="20" y="237" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="A4e-eH-bty"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZTh-nS-RpB"/>
+                                </constraints>
+                                <state key="normal" title="ELIMINAR"/>
+                                <connections>
+                                    <action selector="btnEliminar:" destination="pfn-yr-ZYJ" eventType="touchUpInside" id="2oG-Nh-fdK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-ma-ab5">
+                                <rect key="frame" x="240" y="237" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Ss-s2-9WI"/>
+                                    <constraint firstAttribute="width" constant="154" id="mkT-md-29W"/>
+                                </constraints>
+                                <state key="normal" title="MODIFICAR"/>
+                                <connections>
+                                    <action selector="btnModificar:" destination="pfn-yr-ZYJ" eventType="touchUpInside" id="maP-dl-3ug"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ida-WL-lKE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ida-WL-lKE" firstAttribute="trailing" secondItem="8KM-Wh-CmT" secondAttribute="trailing" constant="20" id="5mp-mg-sA3"/>
+                            <constraint firstItem="Ida-WL-lKE" firstAttribute="trailing" secondItem="rsU-VU-ac1" secondAttribute="trailing" constant="20" id="9ES-SM-9RH"/>
+                            <constraint firstItem="Hdb-4O-OaA" firstAttribute="leading" secondItem="Ida-WL-lKE" secondAttribute="leading" constant="20" id="GfB-4F-rkX"/>
+                            <constraint firstItem="8KM-Wh-CmT" firstAttribute="leading" secondItem="Ida-WL-lKE" secondAttribute="leading" constant="20" id="KaG-u5-ntb"/>
+                            <constraint firstItem="jJY-ma-ab5" firstAttribute="top" secondItem="rsU-VU-ac1" secondAttribute="bottom" constant="52" id="Lm1-8b-3IT"/>
+                            <constraint firstItem="rsU-VU-ac1" firstAttribute="leading" secondItem="Ida-WL-lKE" secondAttribute="leading" constant="20" id="MnK-iX-72A"/>
+                            <constraint firstItem="8KM-Wh-CmT" firstAttribute="top" secondItem="Ida-WL-lKE" secondAttribute="top" constant="79" id="Neh-yt-fnj"/>
+                            <constraint firstItem="Ida-WL-lKE" firstAttribute="trailing" secondItem="jJY-ma-ab5" secondAttribute="trailing" constant="20" id="arb-RR-GCz"/>
+                            <constraint firstItem="rsU-VU-ac1" firstAttribute="top" secondItem="8KM-Wh-CmT" secondAttribute="bottom" constant="38" id="mvD-vd-zwc"/>
+                            <constraint firstItem="Hdb-4O-OaA" firstAttribute="top" secondItem="rsU-VU-ac1" secondAttribute="bottom" constant="52" id="yEG-y4-eK4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hio-x0-Lrn"/>
+                    <connections>
+                        <outlet property="txtContenido" destination="rsU-VU-ac1" id="Ixy-5a-fSf"/>
+                        <outlet property="txtTitulo" destination="8KM-Wh-CmT" id="NvF-uQ-2Vt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRf-Ox-cRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753.62318840579712" y="-110.49107142857143"/>
         </scene>
     </scenes>
     <resources>

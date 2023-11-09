@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9425E9DF2AFCF74F00BD5EDA /* ModificarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9425E9DE2AFCF74F00BD5EDA /* ModificarViewController.swift */; };
 		94B8A1962AF3CE05006335CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B8A1952AF3CE05006335CD /* AppDelegate.swift */; };
 		94B8A1982AF3CE05006335CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B8A1972AF3CE05006335CD /* SceneDelegate.swift */; };
 		94B8A19A2AF3CE05006335CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B8A1992AF3CE05006335CD /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9425E9DE2AFCF74F00BD5EDA /* ModificarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificarViewController.swift; sourceTree = "<group>"; };
 		94B8A1922AF3CE05006335CD /* EjemploTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjemploTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B8A1952AF3CE05006335CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B8A1972AF3CE05006335CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				94B8A1D12AF3CFD8006335CD /* CrearTareaViewController.swift */,
 				94B8A1D62AF3D1BC006335CD /* CeldaTableViewCell.swift */,
 				94B8A1DB2AF3D4EB006335CD /* ObtenerTarea.swift */,
+				9425E9DE2AFCF74F00BD5EDA /* ModificarViewController.swift */,
 			);
 			path = EjemploTableView;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				94B8A19A2AF3CE05006335CD /* ViewController.swift in Sources */,
 				94B8A1DC2AF3D4EB006335CD /* ObtenerTarea.swift in Sources */,
 				94B8A1962AF3CE05006335CD /* AppDelegate.swift in Sources */,
+				9425E9DF2AFCF74F00BD5EDA /* ModificarViewController.swift in Sources */,
 				94B8A1982AF3CE05006335CD /* SceneDelegate.swift in Sources */,
 				94B8A1CA2AF3CE26006335CD /* Tarea.swift in Sources */,
 			);

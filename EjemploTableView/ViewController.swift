@@ -31,9 +31,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return celda
     }
+    //METODOS REALIZADOS A LA VUELTA DE LOS SEGUE (DELEGATE)
     
     func obtener(dato: Tarea) {
         listaTareas.append(dato)
+        tablaTareas.reloadData()
+    }
+    
+    
+    func eliminar(posicion: Int) {
+        listaTareas.remove(at: posicion)
+        tablaTareas.reloadData()
+    }
+    
+    func modificar(posicion: Int, nuevoDato: Tarea) {
+        listaTareas[posicion] = nuevoDato
         tablaTareas.reloadData()
     }
     
@@ -42,6 +54,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
             let destino = segue.destination as! CrearTareaViewController // ABRE LA ACTIVIDAD
             destino.delegate = self // INDICA QUE EL DELEGATE PARA OBTENER INFORMACION A LA VUELTA DEL SEGUE ES ESTA ACTIVIDAD
+        }
+        if segue.identifier == "MODIFICAR"
+        {
+            let destino = segue.destination as! ModificarViewController
+            // PONER LA TAREA DEL DESTINO = TAREA DE LA LISTA CON EL INDICE DE LA TAREA PRESIONADA 
+            destino.tarea = listaTareas[tablaTareas.indexPathForSelectedRow!.row]
+            destino.posicion = tablaTareas.indexPathForSelectedRow!.row
+            destino.delegate = self
         }
     }
     
